@@ -1,11 +1,12 @@
 import React from 'react';
 
-function GuessResults() {
+function GuessResults({ guess, guessResults }) {
   return (
     <div className="guess-results">
       <ul>
-        <li className="guess">FIRST</li>
-        <li className="guess">GUESS</li>
+        {guessResults.map((guess) => (
+          <li className="guess">{guess}</li>
+        ))}
       </ul>
     </div>
   );
